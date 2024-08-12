@@ -1,0 +1,12 @@
+CF Problem 1881A - 
+https://codeforces.com/problemset/problem/1881/A
+
+Searching substring in a string : 
+(S1 in S2) - 2 ways : -
+ 
+-> size_t f = S2.find(S1);
+-> int f = S2.find(S1);
+
+If found, f gives the index; otherwise, f gives garbage value .
+
+NOTE :- (string :: npos) - To put it simply, think of npos as no-position. As a return value, it is usually used to indicate that no matches were found in the string. Thus, if it returns true, matches were found at no positions (i.e., no matches) 
