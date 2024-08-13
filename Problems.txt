@@ -1,4 +1,4 @@
-CF Problem 1881A - 
+1. CF Problem 1881A - 
 https://codeforces.com/problemset/problem/1881/A
 
 Searching substring in a string : 
@@ -8,5 +8,31 @@ Searching substring in a string :
 -> int f = S2.find(S1);
 
 If found, f gives the index; otherwise, f gives garbage value .
+NOTE :- (string :: npos) - To put it simply, think of npos as no-position. As a return value, it is usually used to indicate that no matches were
+found in the string. Thus, if it returns true, matches were found at no positions (i.e., no matches)
 
-NOTE :- (string :: npos) - To put it simply, think of npos as no-position. As a return value, it is usually used to indicate that no matches were found in the string. Thus, if it returns true, matches were found at no positions (i.e., no matches) 
+
+2. Problem F1 - Separating words from a sentence 
+Test case :
+Input - my name is seyam
+Output - MY
+         NAME
+         IS
+         SEYAM
+# Assigning char to an uninitialized string :
+ In C++, strings are dynamic and start empty unless explicitly initialized. When you attempt to assign a character at a particular index
+of an uninitialized string (or one that hasn't been resized), you're accessing memory that doesn't belong to the string. ( like this " r[j]=s[i] ") .  
+There are 2 ways to solve it ->
+Using " push_back " - his method appends a character to the end of the string and resizes it automatically. [ r.push_back(s[i]) ]
+Resizing the string - If you want to assign characters by index, first resize the string to the desired length. [ r.resize(j+1) ]
+
+# Clearing the string :
+ " for(int k=0;k<r.size();k++)  r[k]='\0'; " -> This approach attempts to clear the string "r" by setting each character to the null character '\0'.
+However, this does not change the size of the string. The length of the string "r" remains the same, and if you try to print it after this operation,
+it may not behave as expected because the string still has the same number of characters, even though they are all null characters. Also it is 
+Inefficient .
+The CORRECT way -> " r.clear(); " 
+
+
+
+ 
